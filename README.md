@@ -10,7 +10,7 @@ $$M(s)=\sum_{\textbf{n}}s(\textbf{n}).$$
 
 The energy of a configuration is the sum of internal neighbor interactions and the effect of an external magnetic field $B$:
 
-$$H(s)=-J\sum_{\textbf{n}}\sum_{k=1}^Ds(\textbf{n})s(\textbf{n}+\textbf{e}_k)-\mu B\sum_{\textbf{n}}s(\textbf{n}).$$
+$$H(s)=-J\sum_{\textbf{n}}\sum_{k=1}^Ds(\textbf{n})s(\textbf{n}+\textbf{e}_k)- \mu B\sum_{\textbf{n}}s(\textbf{n}).$$
 
 We use periodic boundary conditions in evaluating the first term.
 
@@ -22,7 +22,7 @@ $$P(s)=\frac1Z\exp\bigg(-\frac{H(s)}{k_BT}\bigg)\quad\text{with}\quad Z=\sum_s\e
 
 To generate a Markov chain of sample spin states, we use the Metropolis algorithm. In each step, it loops over all lattice points $\textbf{n}$ and calculates how the energy would change if that spin was flipped:
 
-$$\Delta H=2J\,s(\textbf{n})\sum_{k=1}^D[s(\textbf{n}+\textbf{e}_k) +s (\textbf{n}-\textbf{e}_k)]+2\mu B\,s(\textbf{n}).$$
+$$\Delta H=2Js(\textbf{n})\sum_{k=1}^D[s(\textbf{n}+\textbf{e}_k) +s (\textbf{n}-\textbf{e}_k)]+2\mu Bs(\textbf{n}).$$
 
 The spin $s(\textbf{n})$ is then flipped if $\exp(-\Delta H/k_BT)$ is larger than some random number drawn uniformly from $[0,1]$.
 
